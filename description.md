@@ -7,7 +7,6 @@ Pia Neuschwander
 y = 3 + 5
 x = 7
 z = 3*x +y
-
 plot(z)
 ```
 
