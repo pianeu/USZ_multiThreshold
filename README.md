@@ -1,6 +1,6 @@
 **USZ_multiThreshold** 
 
-USZ_multiThreshold is an R package to extract and merge data created with the USZ supra-threshold test (STT) for peripheral hearing thresholds (threshold), temporal compresion (TMC) and frequency selectivity (FS). It contains a function to read in a list of xls(x) files; transposing, cleaning and merging them into one single data frame. 
+USZ_multiThreshold is an R package to extract and merge data created with the USZ supra-threshold test (STT) for peripheral hearing thresholds (threshold), temporal compresion (TC) and frequency selectivity (FS). It contains a function to read in a list of xls(x) files; transposing, cleaning and merging them into one single data frame. 
 
 **Installation**
 
