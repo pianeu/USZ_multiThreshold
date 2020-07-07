@@ -1,8 +1,8 @@
 ---
-title: "auddata-vignette"
+title: "USZ_multiThreshold-vignette"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{auddata-vignette}
+  %\VignetteIndexEntry{USZ_multiThreshold--vignette}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -14,6 +14,35 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
+**USZ_multiThreshold** 
+
+USZ_multiThreshold is an R package to extract and merge data created with the USZ supra-threshold test (STT) for peripheral hearing thresholds (threshold), temporal compresion (TC) and frequency selectivity (FS). It contains a function to read in a list of xls(x) files; transposing, cleaning and merging them into one single data frame. 
+
+**Installation**
+
+To install the package from github, devtools is needed. 
+
+```{r}
+devtools::install_github("pianeu/USZ_multiThreshold", subdir="auddata")
+```
+
+**Usage**
+
+Load the package: 
+
+```{r}
 library(auddata)
 ```
+
+Load your dataset: 
+
+```{r}
+file_list <- list.files(path = "/home/neuschwanderp/Desktop/Docs/R/gitHub/USZ_multiThreshold/auddata/ex_data/", full.names = TRUE, recursive = TRUE)
+
+##Call extract_thresholddata function
+
+threshold_data <- extract_thresholddata(file_list)
+
+head(threshold_data)
+
+

@@ -35,7 +35,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={auddata-vignette},
+  pdftitle={USZ\_multiThreshold-vignette},
   pdfborder={0 0 0},
   breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
@@ -109,16 +109,64 @@
 \makeatother
 
 
-\title{auddata-vignette}
+\title{USZ\_multiThreshold-vignette}
 \author{}
 \date{\vspace{-2.5em}}
 
 \begin{document}
 \maketitle
 
+\textbf{USZ\_multiThreshold}
+
+USZ\_multiThreshold is an R package to extract and merge data created
+with the USZ supra-threshold test (STT) for peripheral hearing
+thresholds (threshold), temporal compresion (TC) and frequency
+selectivity (FS). It contains a function to read in a list of xls(x)
+files; transposing, cleaning and merging them into one single data
+frame.
+
+\textbf{Installation}
+
+To install the package from github, devtools is needed.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{devtools}\OperatorTok{::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"pianeu/USZ_multiThreshold"}\NormalTok{, }\DataTypeTok{subdir=}\StringTok{"auddata"}\NormalTok{)}
+\CommentTok{#> Skipping install of 'auddata' from a github remote, the SHA1 (a48cb5f4) has not changed since last install.}
+\CommentTok{#>   Use `force = TRUE` to force installation}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Usage}
+
+Load the package:
+
 \begin{Shaded}
 \begin{Highlighting}[]
 \KeywordTok{library}\NormalTok{(auddata)}
+\end{Highlighting}
+\end{Shaded}
+
+Load your dataset:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{file_list <-}\StringTok{ }\KeywordTok{list.files}\NormalTok{(}\DataTypeTok{path =} \StringTok{"/home/neuschwanderp/Desktop/Docs/R/gitHub/USZ_multiThreshold/auddata/ex_data/"}\NormalTok{, }\DataTypeTok{full.names =} \OtherTok{TRUE}\NormalTok{, }\DataTypeTok{recursive =} \OtherTok{TRUE}\NormalTok{)}
+
+\CommentTok{##Call extract_thresholddata function}
+
+\NormalTok{threshold_data <-}\StringTok{ }\KeywordTok{extract_thresholddata}\NormalTok{(file_list)}
+
+\KeywordTok{head}\NormalTok{(threshold_data)}
+\CommentTok{#> # A tibble: 6 x 11}
+\CommentTok{#>   name    Runs targetFrequency targetDuration Thresholds `Catch trials` `Caught Out` Observations `% Percent Catch~ `% Percent Caught ou~ Repeats}
+\CommentTok{#>   <chr>  <dbl>           <dbl>          <dbl>      <dbl>          <dbl>        <dbl>        <dbl>             <dbl>                 <dbl>   <dbl>}
+\CommentTok{#> 1 0bsr6v     1            1000           0.25       22                6            0           17            0.353                    0         0}
+\CommentTok{#> 2 0bsr6v     2            2000           0.25        7                2            0           15            0.133                    0         0}
+\CommentTok{#> 3 0bsr6v     3           12000           0.25       75.8              3            0           18            0.167                    0         3}
+\CommentTok{#> 4 0bsr6v     4            8000           0.25       23.5              3            0           14            0.214                    0         1}
+\CommentTok{#> 5 0bsr6v     5             500           0.25       19                1            0           13            0.0769                   0         3}
+\CommentTok{#> 6 0bsr6v     6            4000           0.25       10.2              5            1           18            0.278                    0.2       2}
 \end{Highlighting}
 \end{Shaded}
 
