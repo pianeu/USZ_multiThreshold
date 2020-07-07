@@ -32,7 +32,7 @@ extract_thresholddata <- function(list_datafiles) {
         tdf[[i]]$`% Percent Caught out during Catch trials` <- as.numeric(as.character(tdf[[i]]$`% Percent Caught out during Catch trials`))
       }
       data_audio <- bind_rows(tdf)
-      return(data_audio)
+      threshold_data_USZ_STT <- return(data_audio)
       save(data_audio, file = "audiodata_merged.Rds")
 
 
