@@ -33,5 +33,7 @@ extract_thresholddata <- function(list_datafiles) {
       }
       data_audio <- bind_rows(tdf)
       return(data_audio)
+      save(data_audio, file = "audiodata_merged.Rds")
+
 
 }
