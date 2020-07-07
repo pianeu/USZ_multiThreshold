@@ -1,0 +1,22 @@
+Package: auddata
+Title: Data Extraction for USZ_STT Tasks
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Pia",
+           family = "Neuschwander",
+           role = c("aut", "cre"),
+           email = "pia.neuschwander@usb.ch")
+Description: This package allows to import, merge and export multiple xlsx files from USZ_STT tasks.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to
+    pick a license
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: tidyverse,
+         xlsx
+Suggests: 
+    testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
