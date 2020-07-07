@@ -22,7 +22,7 @@ Load your dataset:
 file_list <- list.files(path = "/pathtoyourdata", full.names = TRUE, recursive = TRUE)
 
 
-##Call threshold_data function¨
+##Call extract_thresholddata function
 
 threshold_data <- extract_thresholddata(file_list)
 
