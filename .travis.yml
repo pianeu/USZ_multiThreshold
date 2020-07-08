@@ -7,6 +7,12 @@ r:
   - oldrel
   - release
   - devel
+  
+addons:
+  apt:
+    packages:
+      - pandoc
+      - libxml2-dev  
 
 warnings_are_errors: true
 
