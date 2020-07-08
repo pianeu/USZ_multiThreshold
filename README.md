@@ -7,7 +7,7 @@ USZ_multiThreshold is an R package to extract and merge data created with the US
 To install the package from github, devtools is needed. 
 
 ```r
-devtools::install_github("pianeu/USZ_multiThreshold", subdir="auddata")
+devtools::install_github("pianeu/USZ_multiThreshold")
 ```
 **Usage**
 

@@ -27,7 +27,7 @@ one single data frame.
 To install the package from github, devtools is needed. 
 
 ```{r}
-devtools::install_github("pianeu/USZ_multiThreshold", subdir="auddata")
+devtools::install_github("pianeu/USZ_multiThreshold")
 ```
 
 **Usage**
@@ -35,15 +35,16 @@ devtools::install_github("pianeu/USZ_multiThreshold", subdir="auddata")
 Load the package: 
 
 ```{r}
-library(auddata)
+library(USZ_multiThreshold)
 ```
 
 Load your dataset: 
 
 ```{r}
-file_list <- list.files(path = "/home/neuschwanderp/Desktop/Docs/R/gitHub/USZ_
-                        multiThreshold/auddata/ex_data/", full.names = TRUE, 
-                        recursive = TRUE)
+example_data <- system.file("Summary", package = "USZ_multiThreshold", lib.loc = NULL,
+            mustWork = FALSE)
+             
+ file_list <- list.files(example_data)
 
 ##Call extract_thresholddata function
 
