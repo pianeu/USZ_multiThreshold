@@ -32,5 +32,5 @@ extract_thresholddata <- function(list_datafiles) {
         tdf[[i]]$`% Percent Caught out during Catch trials` <- as.numeric(as.character(tdf[[i]]$`% Percent Caught out during Catch trials`))
       }
       data_audio <- bind_rows(tdf)
-      print(data_audio)
+      return(data_audio)
 }

@@ -7,7 +7,7 @@ test_that("Errored as expected.", {
 #aud_filelist <- system.file("Summary_0bsr6v EAR Thr 25-Jul-2018 13_15_41", package = "auddata", lib.loc = NULL, mustWork = FALSE)
 #threshold_data <- extract_thresholddata(aud_filelist)
 
-aud_filelist <- list.files(path = "/home/neuschwanderp/Desktop/Docs/R/gitHub/USZ_multiThreshold/auddata/ex_data/", full.names = TRUE, recursive = TRUE)
+aud_filelist <- list.files(path = "/auddata/ex_data/", full.names = TRUE, recursive = TRUE)
 threshold_data <- extract_thresholddata(aud_filelist)
 
 test_that("Is numeric", {
