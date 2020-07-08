@@ -1,4 +1,4 @@
-Package: auddata
+Package: USZ_multiThreshold
 Title: Data Extraction for USZ_STT Tasks
 Version: 0.0.1.9000
 Authors@R: 
