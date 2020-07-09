@@ -11,7 +11,7 @@ one single data frame.
 
 To install the package from github, devtools is needed. 
 
-```{r}
+```r
 devtools::install_github("pianeu/USZ_multiThreshold")
 ```
 
@@ -19,13 +19,13 @@ devtools::install_github("pianeu/USZ_multiThreshold")
 
 Load the package: 
 
-```{r}
+```r
 library(USZmultiThreshold)
 ```
 
 Load your dataset: 
 
-```{r}
+```r
 example_data <- system.file("extdata","exdatathr.xls", package = "USZmultiThreshold")
 ##Call extract_thresholddata function
 threshold_data <- extract_thresholddata(example_data)
