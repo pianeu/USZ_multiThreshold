@@ -5,11 +5,11 @@
 #' participants and converts it into a single dataframe
 #' @param list_datafiles A list with xls(x) files
 #' @keywords data extraction, merging
-#' @export data_audio frame with merged auditory threshold data
+#' @export
 #' @examples
-#' aud_filelist <- list.files(path = paste0(inputFolder, "/Audiometrie/"), pattern = "Thr .*\\.xls$", full.names = TRUE, recursive = TRUE)
-#'
-#' extract_thresholddata(aud_filelist)
+#' example_data_path <- system.file("extdata","exdatathr.xls", package = "USZmultiThreshold", mustWork = T)
+#' threshold_data <- extract_thresholddata(example_data_path)
+#' head(threshold_data)
 extract_thresholddata <- function(list_datafiles) {
       library(xlsx)
       library(tidyverse)

@@ -1,8 +1,8 @@
 ---
-title: "USZ_multiThreshold-vignette"
+title: "USZmultiThresh-vignette"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{USZ_multiThreshold--vignette}
+  %\VignetteIndexEntry{USZmultiThresh-vignette}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -13,6 +13,7 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
+
 
 **USZ_multiThreshold** 
 
@@ -35,21 +36,16 @@ devtools::install_github("pianeu/USZ_multiThreshold")
 Load the package: 
 
 ```{r}
-library(USZ_multiThreshold)
+library(USZmultiThreshold)
 ```
 
 Load your dataset: 
 
 ```{r}
-example_data <- system.file("Summary", package = "USZ_multiThreshold", lib.loc = NULL,
-            mustWork = FALSE)
-             
- file_list <- list.files(example_data)
+example_data <- system.file("extdata","exdatathr.xls", package = "USZmultiThreshold")
 
 ##Call extract_thresholddata function
 
-threshold_data <- extract_thresholddata(file_list)
+threshold_data <- extract_thresholddata(example_data)
 
 head(threshold_data)
-
-

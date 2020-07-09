@@ -7,16 +7,20 @@
 extract_thresholddata(list_datafiles)
 }
 \arguments{
-\item{list_datafiles}{A list with xls(x) files you would like to read in and extract}
+\item{list_datafiles}{A list with xls(x) files}
 }
 \description{
-This function allows to read in thresholData (xlsx format) from multiple participants
-and converts it into a single dataframe
+This function allows to read in, transpose and clean auditory
+threshold data (xlsx format) from multiple
+participants and converts it into a single dataframe
 }
 \examples{
-thr_filelist <- list.files(path = paste0(inputFolder, "/Audiometrie/"), pattern = "Thr .*\\\\.xls$", full.names = TRUE, recursive = TRUE)
-
-extract_thresholddata(thr_filelist)
+example_data_path <- system.file("exdata","exdatathr.xls", package = "UZSmultiThreshold")
+file_list <- list.files(example_data_path, full.names = TRUE, recursive = TRUE)
+Call extract_thresholddata function
+threshold_data <- extract_thresholddata(file_list)
+head(threshold_data)
 }
 \keyword{data}
-\keyword{extraction}
+\keyword{extraction,}
+\keyword{merging}

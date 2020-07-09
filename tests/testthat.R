@@ -1,4 +1,4 @@
 library(testthat)
-library(auddata)
+library(USZmultiThresh)
 
-test_check("auddata")
+test_check("USZmultiThresh")
